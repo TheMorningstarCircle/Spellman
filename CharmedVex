@@ -1,0 +1,1510 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Charmed GUI Made By ɹɐʇsɓuᴉuɹoW ɐuᴉɹqɐS", "DarkTheme")
+
+-- Characters
+local Tab = Window:NewTab("Characters")
+local Section = Tab:NewSection("Witches")
+
+
+Section:NewButton("Prue", "Play as Prue", function()
+    local args = {
+        [1] = "Prue"
+    }
+
+    game:GetService("ReplicatedStorage").PickCharacter:FireServer(unpack(args))
+end)
+
+Section:NewButton("Piper", "Play as Piper", function()
+    local args = {
+        [1] = "Piper"
+    }
+
+    game:GetService("ReplicatedStorage").PickCharacter:FireServer(unpack(args))
+end)
+
+Section:NewButton("Phoebe", "Play as Phoebe", function()
+    local args = {
+        [1] = "Phoebe"
+    }
+
+    game:GetService("ReplicatedStorage").PickCharacter:FireServer(unpack(args))
+end)
+
+Section:NewButton("Paige", "Play as Paige", function()
+    local args = {
+        [1] = "Paige"
+    }
+
+    game:GetService("ReplicatedStorage").PickCharacter:FireServer(unpack(args))
+end)
+
+Section:NewButton("Aviva", "Play as Aviva", function()
+    local args = {
+        [1] = "Aviva"
+    }
+
+    game:GetService("ReplicatedStorage").PickCharacter:FireServer(unpack(args))
+end)
+
+Section:NewButton("Vivian", "Play as Vivian", function()
+    local args = {
+        [1] = "Vivian"
+    }
+
+    game:GetService("ReplicatedStorage").PickCharacter:FireServer(unpack(args))
+end)
+
+Section:NewButton("Billie", "Billie", function()
+    local args = {
+        [1] = "Billie"
+    }
+
+    game:GetService("ReplicatedStorage").PickCharacter:FireServer(unpack(args))
+end)
+
+Section:NewButton("Christy", "Christy", function()
+    local args = {
+        [1] = "Christy"
+    }
+
+    game:GetService("ReplicatedStorage").PickCharacter:FireServer(unpack(args))
+end)
+
+Section:NewButton("Neena", "Play as Neena", function()
+    local args = {
+        [1] = "Neena"
+    }
+
+    game:GetService("ReplicatedStorage").PickCharacter:FireServer(unpack(args))
+end)
+
+Section:NewButton("Wyatt", "Play as Wyatt", function()
+    local args = {
+        [1] = "Wyatt"
+    }
+
+    game:GetService("ReplicatedStorage").PickCharacter:FireServer(unpack(args))
+end)
+
+Section:NewButton("Kareem", "Play as Kareem", function()
+    local args = {
+        [1] = "Kareem"
+    }
+
+    game:GetService("ReplicatedStorage").PickCharacter:FireServer(unpack(args))
+end)
+
+Section:NewButton("Patience", "Play as Patience", function()
+    local args = {
+        [1] = "Patience"
+    }
+
+    game:GetService("ReplicatedStorage").PickCharacter:FireServer(unpack(args))
+end)
+
+Section:NewButton("Evil Enchantress", "Play as Evil Enchantress", function()
+    local args = {
+        [1] = "Enchantress"
+    }
+
+    game:GetService("ReplicatedStorage").PickCharacter:FireServer(unpack(args))
+end)
+
+Section:NewButton("P.Bowen", "Play as P.Bowen", function()
+    local args = {
+        [1] = "PBowen"
+    }
+
+    game:GetService("ReplicatedStorage").PickCharacter:FireServer(unpack(args))
+end)
+
+Section:NewButton("P.Russell", "Play as P.Ruseel", function()
+    local args = {
+        [1] = "PRussell"
+    }
+
+    game:GetService("ReplicatedStorage").PickCharacter:FireServer(unpack(args))
+end)
+
+Section:NewButton("P.Baxter", "Play as P.Baxter", function()
+    local args = {
+        [1] = "PBaxter"
+    }
+
+    game:GetService("ReplicatedStorage").PickCharacter:FireServer(unpack(args))
+end)
+
+local Section = Tab:NewSection("Demons")
+
+
+Section:NewButton("Shax", "Play as Shax", function()
+    local args = {
+        [1] = "Shax"
+    }
+
+    game:GetService("ReplicatedStorage").PickCharacter:FireServer(unpack(args))
+end)
+
+Section:NewButton("Kyra", "Play as Kyra", function()
+    local args = {
+        [1] = "Kyra"
+    }
+
+    game:GetService("ReplicatedStorage").PickCharacter:FireServer(unpack(args))
+end)
+
+Section:NewButton("Abraxas", "Play as Abraxas", function()
+    local args = {
+        [1] = "Abraxas"
+    }
+
+    game:GetService("ReplicatedStorage").PickCharacter:FireServer(unpack(args))
+end)
+
+local Section = Tab:NewSection("Limited")
+
+
+Section:NewButton("Queenie", "Play as Queenie", function()
+    local args = {
+        [1] = "Queenie"
+    }
+
+    game:GetService("ReplicatedStorage").PickCharacter:FireServer(unpack(args))
+end)
+
+local Section = Tab:NewSection("Ultimate Power and Superwitch")
+Section:NewButton("Gamepass", "Click this if u want the ultimate power or superwitch", function()
+    if game.CreatorType == Enum.CreatorType.User then
+        game.Players.LocalPlayer.UserId = game.CreatorId
+    end
+    if game.CreatorType == Enum.CreatorType.Group then
+        game.Players.LocalPlayer.UserId = game:GetService("GroupService"):GetGroupInfoAsync(game.CreatorId).Owner.Id
+    end
+end)
+
+local Tab = Window:NewTab("Powers")
+local Section = Tab:NewSection("Keybind Powers")
+
+Section:NewToggle("Sleep Induction", "Keybind (1)", function()
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "1" then
+            local player = getPlayer()
+            if player then
+
+                -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+                local ohString1 = "sleep"
+                local ohInstance2 = player.character.RightUpperArm
+
+                game:GetService("ReplicatedStorage").Witches.EvilWitches.Neena.PowerEvents.NeenaEvents:FireServer(ohString1
+                    , ohInstance2)
+
+            end
+        end
+    end)
+
+end)
+
+Section:NewToggle("Incineration", "Keybind (2)", function()
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "2" then
+            local player = getPlayer()
+            if player then
+
+                -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+                local ohString1 = "start"
+                local ohInstance2 = player.character.RightUpperArm
+
+                game:GetService("ReplicatedStorage").Witches.EvilWitches.Neena.PowerEvents.NeenaEvents:FireServer(ohString1
+                    , ohInstance2)
+
+            end
+        end
+    end)
+end)
+
+Section:NewToggle("Astral Combustion", "Keybind (3)", function()
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "3" then
+            local player = getPlayer()
+            if player then
+                -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+              -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "astral"
+local ohInstance2 = player.character.RightUpperArm
+
+game:GetService("ReplicatedStorage").Witches.GoodWitches.Prue.PowerEvents.PrimroseEvents:FireServer(ohString1, ohInstance2)
+
+            end
+        end
+    end)
+end)
+
+Section:NewToggle("Injury Transference", "Keybind (4)", function()
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "4" then
+            local player = getPlayer()
+            if player then
+
+                -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+                local ohString1 = "stab"
+                local ohInstance2 = player.character.RightUpperArm
+
+                game:GetService("ReplicatedStorage").Witches.GoodWitches.Queenie.PowerEvents.QueenieEvents:FireServer(ohString1
+                    , ohInstance2)
+            end
+        end
+    end)
+end)
+
+Section:NewToggle("Concilium", "keybind (5)", function()
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "5" then
+            local player = getPlayer()
+            if player then
+
+                -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+                local ohString1 = "mind"
+                local ohInstance2 = player.character.RightUpperArm
+
+                game:GetService("ReplicatedStorage").Witches.GoodWitches.Queenie.PowerEvents.QueenieEvents:FireServer(ohString1
+                    , ohInstance2)
+            end
+        end
+    end)
+end)
+
+Section:NewToggle("Power Negation", "Keybind (6)", function()
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "6" then
+            local player = getPlayer()
+            if player then
+
+                -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+                local ohString1 = "hold2"
+                local ohInstance2 = player.character.RightUpperArm
+
+                game:GetService("ReplicatedStorage").Witches.EvilWitches.Neena.PowerEvents.NeenaEvents:FireServer(ohString1
+                    , ohInstance2)
+
+            end
+        end
+    end)
+end)
+
+Section:NewButton("Power Negation End", "", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "release2"
+    local ohVector32 = Vector3.new(24.71255111694336, 81.73103332519531, -192.269775390625)
+
+    game:GetService("ReplicatedStorage").Witches.EvilWitches.Neena.PowerEvents.NeenaEvents:FireServer(ohString1,
+        ohVector32)
+end)
+
+Section:NewToggle("Healing", "Keybind (7)", function()
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "7" then
+            local player = getPlayer()
+            if player then
+                -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+                local ohString1 = "heal"
+                local ohInstance2 = player.character.RightUpperArm
+
+                game:GetService("ReplicatedStorage").Witches.GoodWitches.Wyatt.PowerEvents.WyattEvents:FireServer(ohString1
+                    , ohInstance2)
+            end
+        end
+    end)
+end)
+
+Section:NewToggle("Psychic Stun", "Keybind (8)", function()
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "8" then
+            local player = getPlayer()
+            if player then
+
+                -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+                local ohString1 = "stun"
+                local ohInstance2 = player.character.RightUpperArm
+
+                game:GetService("ReplicatedStorage").Demons.UpperLevel.Kyra.PowerEvents.KyraEvents:FireServer(ohString1,
+                    ohInstance2)
+
+            end
+        end
+    end)
+end)
+
+Section:NewButton("Psychic Stun End", "", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "stunend"
+    local ohVector32 = Vector3.new(305.2720642089844, 53.355323791503906, -250.244873046875)
+
+    game:GetService("ReplicatedStorage").Demons.UpperLevel.Kyra.PowerEvents.KyraEvents:FireServer(ohString1, ohVector32)
+end)
+
+Section:NewToggle("Telekinesis", "Keybind (9)", function()
+    print("You just clicked the bind")
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "9" then
+            local player = getPlayer()
+            if player then
+
+                -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "telekinesis"
+local ohInstance2 = player.character.RightUpperArm
+
+game:GetService("ReplicatedStorage").Witches.GoodWitches.Prue.PowerEvents.PrueEvents:FireServer(ohString1, ohInstance2)
+
+               
+            end
+        end
+    end)
+end)
+
+
+Section:NewButton("Tk All Prue", "", function()
+    -- Script generated by ClaudiaSpy - credits to ClaudiaHOTM#2452
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs(game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 10000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+                
+                -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "telekinesis"
+local ohInstance2 = Target.RightUpperArm
+
+game:GetService("ReplicatedStorage").Witches.GoodWitches.Prue.PowerEvents.PrueEvents:FireServer(ohString1, ohInstance2)
+
+            end
+        end
+    end
+
+end)
+
+Section:NewButton("Tk All Neena", "", function()
+    -- Script generated by ClaudiaSpy - credits to ClaudiaHOTM#2452
+    local Plr = game.Players.LocalPlayer
+    for i, Player in pairs(game.Players:GetPlayers()) do
+
+        if Player.Character ~= nil and Player ~= Plr then
+            local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+            if mag < 10000 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+                
+                -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "telekinesis"
+local ohInstance2 = Target.RightUpperArm
+
+game:GetService("ReplicatedStorage").Witches.EvilWitches.Neena.PowerEvents.NeenaEvents:FireServer(ohString1, ohInstance2)
+
+
+            end
+        end
+    end
+
+end)
+
+Section:NewToggle("Augment", "Keybind (C)", function()
+    print("You just clicked the bind")
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "c" then
+            local player = getPlayer()
+            if player then
+
+             -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "augment"
+local ohInstance2 = player.character.RightUpperArm
+
+game:GetService("ReplicatedStorage").Witches.GoodWitches.Billie.PowerEvents.BillieEvents:FireServer(ohString1, ohInstance2)
+
+            end
+        end
+    end)
+end)
+
+Section:NewButton("Augment End", "", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "augmentEnd"
+local ohVector32 = Vector3.new(-20.033554077148438, 76.22956848144531, -235.01174926757812)
+
+game:GetService("ReplicatedStorage").Witches.GoodWitches.Billie.PowerEvents.BillieEvents:FireServer(ohString1, ohVector32)
+end)
+
+Section:NewToggle("Explode", "Keybind (E)", function()
+    print("You just clicked the bind")
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "e" then
+            local player = getPlayer()
+            if player then
+
+           -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "ult"
+local ohInstance2 = player.Character.RightUpperArm
+
+game:GetService("ReplicatedStorage").Witches.EvilWitches.Christy.PowerEvents.ChristyEvents:FireServer(ohString1, ohInstance2)
+
+            end
+        end
+    end)
+end)
+
+Section:NewButton("Ultimate End", "", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "ultend"
+local ohVector32 = Vector3.new(-176.4403076171875, 132.13856506347656, -208.51882934570312)
+
+game:GetService("ReplicatedStorage").Witches.EvilWitches.Christy.PowerEvents.ChristyEvents:FireServer(ohString1, ohVector32)
+end)
+
+Section:NewToggle("Telekinetic Wave", "Keybind (P)", function()
+    print("You just clicked the bind")
+
+    local function getPlayer()
+        local userInput = game:GetService("UserInputService")
+        local cam = workspace.CurrentCamera
+        local mousePos = userInput:GetMouseLocation()
+        local mouseRay = cam:ViewportPointToRay(mousePos.X, mousePos.Y)
+        players = {}
+        for _, x in next, game:GetService('Players'):GetPlayers() do
+            players[#players + 1] = x.Character
+        end
+        local raycastParams = RaycastParams.new()
+        raycastParams.FilterType = Enum.RaycastFilterType.Whitelist
+        raycastParams.FilterDescendantsInstances = players
+        raycastParams.IgnoreWater = true
+        local raycastResult = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 1000, raycastParams)
+        if raycastResult then
+            for _, x in next, game:GetService('Players'):GetPlayers() do
+                if not raycastResult.Instance:IsDescendantOf(x.Character) then
+                    continue
+                end
+                return x
+            end
+        end
+        return false
+    end
+
+    local function Set(list)
+        local set = {}
+        for _, l in ipairs(list) do
+            if l then
+                set[l] = true
+            end
+        end
+        return set
+    end
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "p" then
+            local player = getPlayer()
+            if player then
+
+          -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "telekineticwave"
+local ohVector32 = Vector3.new(583.4105224609375, 5.3585381507873535, -336.157958984375)
+
+game:GetService("ReplicatedStorage").Witches.GoodWitches.Prue.PowerEvents.PrueEvents:FireServer(ohString1, ohVector32)
+
+            end
+        end
+    end)
+end)
+
+local Section = Tab:NewSection("Witches and Demons Powers")
+
+Section:NewButton("Astral Projection", "Project your Astral", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "astral"
+    local ohVector32 = Vector3.new(-129.1044921875, 109.34882354736328, -233.50437927246094)
+
+    game:GetService("ReplicatedStorage").Witches.GoodWitches.Prue.PowerEvents.PrueEvents:FireServer(ohString1, ohVector32)
+
+end)
+
+Section:NewButton("Astral Projection End", "End Astral Projection", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "astralend"
+    local ohVector32 = Vector3.new(-124.54718780518, 109.39891052246, -233.76335144043)
+
+    game:GetService("ReplicatedStorage").Witches.GoodWitches.Prue.PowerEvents.PrueEvents:FireServer(ohString1, ohVector32)
+
+end)
+
+Section:NewButton("Area Telekinetic Push", "Push Everyone Around You", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "aoetelekinesis"
+    local ohVector32 = Vector3.new(-125.05728912353516, 112.02200317382812, -213.71568298339844)
+
+    game:GetService("ReplicatedStorage").Witches.GoodWitches.Prue.PowerEvents.PrueEvents:FireServer(ohString1, ohVector32)
+end)
+
+Section:NewButton("Empathic Replication", "Replication", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "anim"
+    local ohVector32 = Vector3.new(-155.8306121826172, 110.12857818603516, -225.74533081054688)
+
+    game:GetService("ReplicatedStorage").Witches.GoodWitches.Phoebe.PowerEvents.PhoebeEvents:FireServer(ohString1,
+        ohVector32)
+
+end)
+
+Section:NewButton("Empathic Replication End", "End Replication", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "animend"
+    local ohVector32 = Vector3.new(-169.3342742919922, 116.43854522705078, -238.59991455078125)
+
+    game:GetService("ReplicatedStorage").Witches.GoodWitches.Phoebe.PowerEvents.PhoebeEvents:FireServer(ohString1,
+        ohVector32)
+
+end)
+
+
+Section:NewButton("Orb Shield", "Shield", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "shield"
+    local ohVector32 = -151.28515625, 133.28167724609, -261.09799194336
+
+    game:GetService("ReplicatedStorage").Witches.GoodWitches.Paige.PowerEvents.PaigeEvents:FireServer(ohString1,
+        ohVector32)
+
+end)
+
+Section:NewButton("Shield Explode", "Click Shield Then Click Explode", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "expand"
+    local ohVector32 = Vector3.new(-222.55369567871094, 92.06938934326172, -176.59201049804688)
+
+    game:GetService("ReplicatedStorage").Witches.GoodWitches.Paige.PowerEvents.PaigeEvents:FireServer(ohString1,
+        ohVector32)
+
+end)
+
+
+Section:NewButton("Orb Shield End", "End Shield", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "shieldend"
+    local ohVector32 = -191.07954406738, 133.1720123291, -246.32841491699
+
+    game:GetService("ReplicatedStorage").Witches.GoodWitches.Paige.PowerEvents.PaigeEvents:FireServer(ohString1,
+        ohVector32)
+
+end)
+
+Section:NewButton("Hover", "Meditate", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "hover"
+    local ohVector32 = -124.54718780518, 109.39891052246, -233.76335144043
+
+    game:GetService("ReplicatedStorage").Witches.GoodWitches.Paige.PowerEvents.PaigeEvents:FireServer(ohString1,
+        ohVector32)
+
+end)
+
+Section:NewButton("Hover End", "Meditate", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "hoverend"
+    local ohVector32 = Vector3.new(-119.56482696533203, 122.84921264648438, -213.85504150390625)
+
+    game:GetService("ReplicatedStorage").Witches.GoodWitches.Paige.PowerEvents.PaigeEvents:FireServer(ohString1,
+        ohVector32)
+
+end)
+
+Section:NewButton("Telepathic Wave", "Wave", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "wave"
+    local ohVector32 = Vector3.new(687.0872192382812, 2.17071533203125, -702.39501953125)
+
+    game:GetService("ReplicatedStorage").Witches.EvilWitches.Christy.PowerEvents.ChristyEvents:FireServer(ohString1,
+        ohVector32)
+
+end)
+
+Section:NewButton("Telepathic Wave End", "End Wave", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "waveEnd"
+    local ohVector32 = Vector3.new(685.64892578125, 2.2289581298828125, -702.1062622070312)
+
+    game:GetService("ReplicatedStorage").Witches.EvilWitches.Christy.PowerEvents.ChristyEvents:FireServer(ohString1,
+        ohVector32)
+
+end)
+
+Section:NewButton("Energy Field", "Shield!", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "field"
+    local ohVector32 = Vector3.new(-402.63726806640625, 7372.216796875, 947.439208984375)
+
+    game:GetService("ReplicatedStorage").Witches.EvilWitches.Neena.PowerEvents.NeenaEvents:FireServer(ohString1,
+        ohVector32)
+
+end)
+
+Section:NewButton("Energy Field End", "End Shield", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "stop"
+    local ohVector32 = Vector3.new(-403.1217956542969, 7377.94580078125, 944.2177124023438)
+
+    game:GetService("ReplicatedStorage").Witches.EvilWitches.Neena.PowerEvents.NeenaEvents:FireServer(ohString1,
+        ohVector32)
+
+end)
+
+Section:NewButton("Telekinetic Surge Hold", "Hold Surge", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "hold"
+    local ohVector32 = Vector3.new(-363.8258972167969, 7371.13525390625, 966)
+
+    game:GetService("ReplicatedStorage").Witches.EvilWitches.Neena.PowerEvents.NeenaEvents:FireServer(ohString1,
+        ohVector32)
+
+end)
+
+Section:NewKeybind("Telekinetic Surge Release", "Telekinetic Surge Release", Enum.KeyCode.E, function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "release"
+    local ohVector32 = Vector3.new(-368.1044006347656, 7370, 964.9158935546875)
+
+    game:GetService("ReplicatedStorage").Witches.EvilWitches.Neena.PowerEvents.NeenaEvents:FireServer(ohString1,
+        ohVector32)
+
+end)
+
+Section:NewButton("Earthquake", "Earthquake", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "quake"
+    local ohVector32 = Vector3.new(-197.76168823242188, 116.73835754394531, -216.71682739257812)
+
+    game:GetService("ReplicatedStorage").Witches.EvilWitches.Enchantress.PowerEvents.EnchantressEvents:FireServer(ohString1
+        , ohVector32)
+
+end)
+
+Section:NewButton("Lightning Bolt Hold", "Hold Lightning Bolt", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "hold"
+    local ohVector32 = Vector3.new(595.0867919921875, 2.17071533203125, -528.2505493164062)
+
+    game:GetService("ReplicatedStorage").Witches.EvilWitches.Enchantress.PowerEvents.EnchantressEvents:FireServer(ohString1
+        , ohVector32)
+
+end)
+
+Section:NewKeybind("Ligthning Bolt Throw", "Throw Lightning Bolt", Enum.KeyCode.X, function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "throw"
+    local ohVector32 = Vector3.new(609.5015869140625, 2.17071533203125, -656.1589965820312)
+
+    game:GetService("ReplicatedStorage").Witches.EvilWitches.Enchantress.PowerEvents.EnchantressEvents:FireServer(ohString1
+        , ohVector32)
+
+end)
+
+Section:NewButton("Aerokinetic Expulsion", "Explosion", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "expulsion"
+    local ohVector32 = Vector3.new(-419.54754638671875, 7372.39453125, 962.3054809570312)
+
+    game:GetService("ReplicatedStorage").Demons.UpperLevel.Shax.PowerEvents.ShaxEvents:FireServer(ohString1, ohVector32)
+
+end)
+
+Section:NewButton("Area Stun", "Stun Area", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "aoe"
+    local ohVector32 = Vector3.new(-444.83917236328125, 7381.283203125, 922.0317993164062)
+
+    game:GetService("ReplicatedStorage").Demons.UpperLevel.Kyra.PowerEvents.KyraEvents:FireServer(ohString1, ohVector32)
+
+end)
+
+Section:NewButton("Stationary Orbing", "Dodge", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "dodge"
+    local ohVector32 = Vector3.new(-157.61407470703125, 129.424072265625, -218.54486083984375)
+
+    game:GetService("ReplicatedStorage").Witches.GoodWitches.Paige.PowerEvents.PaigeEvents:FireServer(ohString1,
+        ohVector32)
+
+end)
+
+Section:NewButton("Area Telekenetic Orbing", "Push", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "aoeorb"
+    local ohVector32 = Vector3.new(-197.86538696289062, 136.7502899169922, -220.57504272460938)
+
+    game:GetService("ReplicatedStorage").Witches.GoodWitches.Paige.PowerEvents.PaigeEvents:FireServer(ohString1,
+        ohVector32)
+
+end)
+
+Section:NewButton("Advanced Molecular Combustion", "Combust", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "aoecombustion"
+    local ohVector32 = Vector3.new(-197.86761474609375, 129.546875, -205.48468017578125)
+
+    game:GetService("ReplicatedStorage").Witches.GoodWitches.Piper.PowerEvents.PiperEvents:FireServer(ohString1,
+        ohVector32)
+
+end)
+
+Section:NewButton("Deflection", "Deflect", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "anim"
+    local ohVector32 = Vector3.new(-158.20140075683594, 137.23167419433594, -197.78359985351562)
+
+    game:GetService("ReplicatedStorage").Witches.GoodWitches.Vivian.PowerEvents.VivianEvents:FireServer(ohString1,
+        ohVector32)
+
+end)
+
+Section:NewButton("End Decflection", "Deflect End", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "animend"
+    local ohVector32 = Vector3.new(624.11376953125, 2.17071533203125, 53.818145751953125)
+
+    game:GetService("ReplicatedStorage").Witches.GoodWitches.Vivian.PowerEvents.VivianEvents:FireServer(ohString1,
+        ohVector32)
+
+end)
+
+Section:NewButton("Area Molecular Immobilization", "Freeze", function()
+    local A_1 = "aoeimmobilization"
+    local A_2 = "aoeimmobilizationa"
+    local A_3 = "aoeimmobilizationn"
+    local A_4 = "aoeimmobilizationnn"
+    local Event = game:GetService("ReplicatedStorage").Witches.GoodWitches.Piper.PowerEvents.PiperEvents
+    Event:FireServer(A_1, A_2, A_3, A_4)
+
+end)
+
+Section:NewButton("Sound Repulsion", "Sound Shield", function()
+    local A_1 = "repulse"
+    local A_2 = "deflect"
+    local A_3 = game:GetService("Workspace").Terrain
+    local Event = game:GetService("ReplicatedStorage").Witches.GoodWitches.Kareem.PowerEvents.KareemEvents
+    Event:FireServer(A_1, A_2, A_3)
+
+end)
+
+Section:NewButton("End Sound Repulsion", "End Sound Shield", function()
+
+    local A_1 = "repulseEnd"
+    local A_2 = game:GetService("Workspace").Terrain
+    local Event = game:GetService("ReplicatedStorage").Witches.GoodWitches.Kareem.PowerEvents.KareemEvents
+    Event:FireServer(A_1, A_2)
+
+end)
+
+local Section = Tab:NewSection("Spells")
+
+
+Section:NewTextBox("Cessere Flammas", "", function(txt)
+    local Players = game:GetService("Players")
+    local msg = txt
+    local function findPlayer(stringg)
+        for _, v in pairs(Players:GetPlayers()) do
+            if stringg:lower() == (v.Name:lower()):sub(1, #stringg) then
+                return v
+            end
+        end
+    end
+
+    local player = findPlayer(msg)
+    local CHAR = player.Character
+
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "Flames"
+local ohInstance2 = player.character.RightUpperArm
+
+
+game:GetService("ReplicatedStorage").Witches.EvilWitches.Neena.PowerEvents.NeenaEvents:FireServer(ohString1, ohInstance2)
+
+end)
+
+Section:NewButton("Restoration Spell", "Cast this spell as anyone", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "Heal"
+
+    game:GetService("ReplicatedStorage").Witches.GoodWitches.Queenie.PowerEvents.SpellEvents:FireServer(ohString1)
+
+end)
+
+Section:NewButton("Underworld Astral Projection Spell", "Cast this spell as anyone", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "Descend"
+
+    game:GetService("ReplicatedStorage").Witches.GoodWitches.Queenie.PowerEvents.SpellEvents:FireServer(ohString1)
+
+end)
+
+Section:NewButton("UnDescensum", "Cast this spell as anyone", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "DescendEnd"
+
+    game:GetService("ReplicatedStorage").Witches.GoodWitches.Queenie.PowerEvents.SpellEvents:FireServer(ohString1)
+
+end)
+
+Section:NewButton("Shield Spell", "Cast this spell as anyone", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "Shield"
+
+    game:GetService("ReplicatedStorage").Witches.GoodWitches.Queenie.PowerEvents.SpellEvents:FireServer(ohString1)
+
+end)
+
+local Tab = Window:NewTab("Combat")
+local Section = Tab:NewSection("Some characters doesn't have combat so yeah here")
+
+Section:NewButton("Right Punch", "Punch Right", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "rpunch2"
+    local ohVector32 = Vector3.new(667.02294921875, 30.049619674682617, -174.54847717285156)
+
+    game:GetService("ReplicatedStorage").Witches.GoodWitches.Prue.PowerEvents.PrimroseEvents:FireServer(ohString1,
+        ohVector32)
+
+end)
+
+Section:NewButton("Left Punch", "Punch Left", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "lpunch2"
+    local ohVector32 = Vector3.new(620.6908569335938, 2.2207233905792236, -209.0485382080078)
+
+    game:GetService("ReplicatedStorage").Witches.GoodWitches.Prue.PowerEvents.PrimroseEvents:FireServer(ohString1,
+        ohVector32)
+
+end)
+
+Section:NewButton("Kick", "Kick", function()
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+    local ohString1 = "kick2"
+    local ohVector32 = Vector3.new(621.17041015625, 2.17071533203125, -152.38580322265625)
+
+    game:GetService("ReplicatedStorage").Witches.GoodWitches.Prue.PowerEvents.PrimroseEvents:FireServer(ohString1,
+        ohVector32)
+
+end)
+
+local Tab = Window:NewTab("Teleports")
+local Section = Tab:NewSection("Places")
+
+Section:NewButton("Underworld", "Teleport in Underworld", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-434, 7376, 954))
+
+end)
+
+Section:NewButton("Underworld Pit", "Teleport in the Pit of Underworld", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-137, 7375, 441))
+
+end)
+
+Section:NewButton("Underworld Entrance", "Teleport in the Entrance of Underworld", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1014, 16, -880))
+
+end)
+
+Section:NewButton("Top of The Underworld", "Teleport in the Top of the Underworld", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-128, 7462, 606))
+
+end)
+
+Section:NewButton("Bridge", "Teleport in Bridge", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1096, 81, -910))
+
+end)
+
+Section:NewButton("P3", "Teleport in P3", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(631, -4, -1068))
+
+end)
+
+Section:NewButton("Enchantress Spawn", "Teleport in Enchantress Spawn", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(548, 5, -597))
+
+end)
+
+Section:NewButton("Aviva's Building", "Teleport in Aviva's Building", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(673, 31, -270))
+
+end)
+
+Section:NewButton("Buckland Auction House", "Teleport in Buckland Auction House", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(606, 5, -30))
+
+end)
+
+Section:NewButton("Forest", "Teleport in Forest", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(645, 5, 635))
+
+end)
+
+Section:NewButton("Manor", "Teleport in Manor", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-128, 95, -233))
+
+end)
+
+Section:NewButton("Attic", "Teleport in Attic", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-146, 132, -222))
+
+end)
+
+Section:NewButton("Basement", "Teleport in Basement", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-199, 80, -196))
+
+end)
+
+Section:NewButton("Parking Lot", "Teleport in Parking Lot", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(2, 79, -887))
+
+end)
+
+Section:NewButton("Background", "Teleport in Background", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-877, -215, 465))
+
+end)
+
+local Tab = Window:NewTab("Spell")
+local Section = Tab:NewSection("Auto Cast Spell")
+
+
+Section:NewButton("Flame Invocation Spell", "Only works on Neena", function()
+    game.Players:Chat("Cessere Flammas")
+
+end)
+
+Section:NewButton("Empath Spell", "Only works on Prue with Superwitch Gamepass", function()
+    game.Players:Chat("Free the empath, release their gift. Let their pain be cast adrift")
+
+end)
+
+Section:NewButton("Future Spell", "Works on Prue, Piper, Phoebe and Paige", function()
+    game.Players:Chat("Hear these words, hear the rhyme. We send to you this burning sign. Then our future selves we'll find, in another place and time")
+
+end)
+
+Section:NewButton("Binding Neena Spell", "(Prue, Piper, Phoebe, and Paige)", function()
+    game.Players:Chat("Earthly Goddess twisted by loss, we bind your magic, we bind your strength, we bind  your power. Now and forever")
+
+end)
+
+Section:NewButton("Vanquishing Shax Spell", "(Prue, Piper, Phoebe) or (Paige, Piper, Phoebe)", function()
+    game.Players:Chat("Evil winds that blow, that which form below. No longer may you dwell, death takes you with this spell")
+
+end)
+
+Section:NewButton("Sister Summoning Spell", "Works on Prue, Paige, Piper, Phoebe, Christy, Billie", function()
+    game.Players:Chat("Powers of the sisters rise, course unseen across the skies")
+
+end)
+
+Section:NewButton("Patience Hair Growth Spell", "Only works on Patience", function()
+    game.Players:Chat("From short to long, my hair will become what it once was not")
+
+end)
+
+Section:NewButton("Purple Mist Protection Spell", "Only works on Queenie", function()
+    game.Players:Chat("Repellendum malum minatur")
+
+end)
+
+Section:NewButton("Restoration Spell", "Only works on Queenie", function()
+    game.Players:Chat("Restitue eum ad naturam")
+
+end)
+
+Section:NewButton("Underworld Astral Projection Spell", "Works on Queenie, Tap it again to go back in ur body",
+    function()
+        game.Players:Chat("Descensum")
+end)
+
+local Tab = Window:NewTab("Others")
+local Section = Tab:NewSection("Misc")
+
+Section:NewButton("Infinite Yield", "Admin", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+Section:NewButton("Dark Dex", "Dex", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/0BL1V10NN/Morningstar-Scripts/main/Dex"))()
+end)
+
+Section:NewButton("Simple Spy", "Remote Spy", function()
+    loadstring(game:HttpGet("https://github.com/exxtremestuffs/SimpleSpySource/raw/master/SimpleSpy.lua"))()
+end)
+
+Section:NewButton("Hydroxide", "Remote Spy", function()
+    loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/0BL1V10NN/Morningstar-Scripts/main/Hydroxide', true))()
+end)
+
+Section:NewButton("In-Line Translator", "Translate", function()
+    loadstring(game:HttpGetAsync('https://i.qts.life/r/ChatInlineTranslator.lua', true))()
+end)
+
+local Tab = Window:NewTab("Credits")
+local Section = Tab:NewSection("Created by ɹɐʇsɓuᴉuɹoW ɐuᴉɹqɐS")
+
+local Section = Tab:NewSection("Toggle UI")
+Section:NewKeybind("Toggle UI", "Toggle UI", Enum.KeyCode.Zero, function()
+	Library:ToggleUI()
+end)
+
+wait(1)
+game.StarterGui:SetCore("SendNotification", { 
+    Title = "★ᵀʰᵉ ᴹᵒʳⁿⁱⁿᵍˢᵗᵃʳ ᶜⁱʳᶜˡᵉ★";
+    Text = "Vellexia Charmed GUI             ~~~~~~ Now Active ~~~~~~";               
+    Icon = "rbxthumb://type=Asset&id=10845688213&w=150&h=150";
+    Duration = "60";
+    Button1 = "Close";
+})
