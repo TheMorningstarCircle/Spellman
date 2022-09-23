@@ -13,6 +13,16 @@ Section:NewButton("Gamepass Script", "", function()
     end
 end)
 
+local Section = Tab:NewSection("Main")
+
+Section:NewButton("Instant Level 9999999", "", function()
+    game.Players.LocalPlayer.LevelSystemValues.LevelValue.Value = 9999999
+end)
+
+Section:NewButton("9999999 Cash", "", function()
+    game.Players.LocalPlayer.LevelSystemValues.CoinValue.Value = 9999999
+end)
+
 local Tab = Window:NewTab("Outfits")
 local Section = Tab:NewSection("It will kick you if you dont own the outfits")
 local Section = Tab:NewSection("Change Outfits")
