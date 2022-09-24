@@ -1,0 +1,114 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("All-In-One Gui Made By ɹɐʇsɓuᴉuɹoW ɐuᴉɹqɐS", "Sentinel")
+
+local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("Scripts")
+
+Section:NewButton("Tre_Mainee Charmed Script", "", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/SabrinaMorningstar27/TheMorningstarCircle/main/CharmedTM'),true))()
+end)
+
+Section:NewButton("Vellexia Charmed Script", "", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/SabrinaMorningstar27/TheMorningstarCircle/main/CharmedVex'),true))()
+end)
+
+Section:NewButton("Crossover Legends Script", "", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/SabrinaMorningstar27/TheMorningstarCircle/main/CrossoverLegends'),true))()
+end)
+
+Section:NewButton("Era Of Encanto Script", "", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/SabrinaMorningstar27/TheMorningstarCircle/main/EraofEncanto'),true))()
+end)
+
+Section:NewButton("Every Witch Way Reborn! Script", "", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/SabrinaMorningstar27/TheMorningstarCircle/main/EveryWitchWayReborn'),true))()
+end)
+
+Section:NewButton("Magic Witchcraft V.2 Script", "", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/SabrinaMorningstar27/TheMorningstarCircle/main/WitchcraftV.2'),true))()
+end)
+
+Section:NewButton("Marvel: Enhanced (Old Testing Site) Script", "", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/SabrinaMorningstar27/TheMorningstarCircle/main/Marvel%3A%20Enhanced%20(Old%20Testing%20Site)'),true))()
+end)
+
+Section:NewButton("Marvel: Uprising Script", "", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/SabrinaMorningstar27/TheMorningstarCircle/main/MarvelUprising'),true))()
+end)
+
+Section:NewButton("Miraculous RP Script", "", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/SabrinaMorningstar27/TheMorningstarCircle/main/MiraculousRP'),true))()
+end)
+
+Section:NewButton("Olympus Reborn Script", "", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/SabrinaMorningstar27/TheMorningstarCircle/main/Olympus%20Reborn'),true))()
+end)
+
+Section:NewButton("Stranger Things: Conspiracies Script", "", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/SabrinaMorningstar27/TheMorningstarCircle/main/STConspiracies'),true))()
+end)
+
+Section:NewButton("Stranger Things: Tragedies Script", "", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/SabrinaMorningstar27/TheMorningstarCircle/main/STTragedies'),true))()
+end)
+
+Section:NewButton("Sprinx Script", "", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/SabrinaMorningstar27/TheMorningstarCircle/main/SprinX'),true))()
+end)
+
+Section:NewButton("Starlix Club Script", "", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/SabrinaMorningstar27/TheMorningstarCircle/main/Starlix%20Club'),true))()
+end)
+
+
+Section:NewButton("The Fairy Guardians Script", "", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/SabrinaMorningstar27/TheMorningstarCircle/main/TheFairyGuardians'),true))()
+end)
+
+Section:NewButton("The Jedi Academy Script", "", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/SabrinaMorningstar27/TheMorningstarCircle/main/TheJediAcademy'),true))()
+end)
+
+Section:NewButton("The Mystic Diaries", "", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/SabrinaMorningstar27/TheMorningstarCircle/main/TheMysticDiaries'),true))()
+end)
+
+local Tab = Window:NewTab("Others")
+local Section = Tab:NewSection("Misc")
+
+Section:NewButton("Infinite Yield", "Admin", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+Section:NewButton("Dark Dex", "Dex", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/0BL1V10NN/Morningstar-Scripts/main/Dex"))()
+end)
+
+Section:NewButton("Simple Spy", "Remote Spy", function()
+    loadstring(game:HttpGet("https://github.com/exxtremestuffs/SimpleSpySource/raw/master/SimpleSpy.lua"))()
+end)
+
+Section:NewButton("Hydroxide", "Remote Spy", function()
+    loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/0BL1V10NN/Morningstar-Scripts/main/Hydroxide', true))()
+end)
+
+Section:NewButton("In-Line Translator", "Translate", function()
+    loadstring(game:HttpGetAsync('https://i.qts.life/r/ChatInlineTranslator.lua', true))()
+end)
+
+local Tab = Window:NewTab("Credits")
+local Section = Tab:NewSection("Created by ɹɐʇsɓuᴉuɹoW ɐuᴉɹqɐS")
+
+local Section = Tab:NewSection("Toggle UI")
+Section:NewKeybind("Toggle UI", "Toggle UI", Enum.KeyCode.Zero, function()
+	Library:ToggleUI()
+end)
+
+wait(1)
+game.StarterGui:SetCore("SendNotification", { 
+    Title = "★ᵀʰᵉ ᴹᵒʳⁿⁱⁿᵍˢᵗᵃʳ ᶜⁱʳᶜˡᵉ★";
+    Text = "All-In-One GUI|Now Active";               
+    Icon = "rbxthumb://type=Asset&id=10845688213&w=150&h=150";
+    Duration = "60";
+    Button1 = "Close";
+})
