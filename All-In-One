@@ -41,7 +41,7 @@ Section:NewButton("Miraculous RP Script", "", function()
 end)
 
 Section:NewButton("Multiverse Reborn Script", "", function()
-    loadstring(game:HttpGet(('https://raw.githubusercontent.com/SabrinaMorningstar27/TheMorningstarCircle/main/MiraculousRP'),true))()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/SabrinaMorningstar27/TheMorningstarCircle/main/MultiverseReborn'),true))()
 end)
 
 Section:NewButton("Olympus Reborn Script", "", function()
