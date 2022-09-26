@@ -48,6 +48,10 @@ Section:NewButton("Olympus Reborn Script", "", function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/SabrinaMorningstar27/TheMorningstarCircle/main/Olympus%20Reborn'),true))()
 end)
 
+Section:NewButton("Sailor Moon Project! Script", "", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/SabrinaMorningstar27/TheMorningstarCircle/main/SailorMoonProject'),true))()
+end)
+
 Section:NewButton("Stranger Things: Conspiracies Script", "", function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/SabrinaMorningstar27/TheMorningstarCircle/main/STConspiracies'),true))()
 end)
