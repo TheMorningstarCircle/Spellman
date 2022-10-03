@@ -2437,41 +2437,49 @@ game:GetService("ReplicatedStorage").Events.LocalScriptsTimer.ClientToServer:Fir
  end)
 
  local Tab = Window:NewTab("Others")
- local Section = Tab:NewSection("Misc")
- 
- Section:NewButton("Infinite Yield", "Admin", function()
-     loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
- end)
- 
- Section:NewButton("Dark Dex", "Dex", function()
-     loadstring(game:HttpGet("https://raw.githubusercontent.com/0BL1V10NN/Morningstar-Scripts/main/Dex"))()
- end)
- 
- Section:NewButton("Simple Spy", "Remote Spy", function()
-     loadstring(game:HttpGet("https://github.com/exxtremestuffs/SimpleSpySource/raw/master/SimpleSpy.lua"))()
- end)
- 
- Section:NewButton("Hydroxide", "Remote Spy", function()
-     loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/0BL1V10NN/Morningstar-Scripts/main/Hydroxide', true))()
- end)
- 
- Section:NewButton("In-Line Translator", "Translate", function()
-     loadstring(game:HttpGetAsync('https://i.qts.life/r/ChatInlineTranslator.lua', true))()
- end)
- 
- local Tab = Window:NewTab("Credits")
- local Section = Tab:NewSection("Created by ɹɐʇsɓuᴉuɹoW ɐuᴉɹqɐS")
- 
- local Section = Tab:NewSection("Toggle UI")
- Section:NewKeybind("Toggle UI", "Toggle UI", Enum.KeyCode.Zero, function()
-     Library:ToggleUI()
- end)
- 
- wait(1)
- game.StarterGui:SetCore("SendNotification", { 
-     Title = "★ᵀʰᵉ ᴹᵒʳⁿⁱⁿᵍˢᵗᵃʳ ᶜⁱʳᶜˡᵉ★";
-     Text = "Miraculous RP GUI             ~~~~~~ Now Active ~~~~~~";               
-     Icon = "rbxthumb://type=Asset&id=10845688213&w=150&h=150";
-     Duration = "60";
-     Button1 = "Close";
- })
+local Section = Tab:NewSection("Misc")
+
+Section:NewButton("Infinite Yield", "Admin", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+Section:NewButton("Btools", "", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TheMorningstarCircle/Spellman/main/Btools"))()
+end)
+
+Section:NewButton("CMD Admin", "", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TheMorningstarCircle/Spellman/main/CMD"))()
+end)
+
+Section:NewButton("Dark Dex", "Dex", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TheMorningstarCircle/Spellman/main/Dex"))()
+end)
+
+Section:NewButton("Simple Spy", "Remote Spy", function()
+    loadstring(game:HttpGet("https://github.com/exxtremestuffs/SimpleSpySource/raw/master/SimpleSpy.lua"))()
+end)
+
+Section:NewButton("Hydroxide", "Remote Spy", function()
+    loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/TheMorningstarCircle/Spellman/main/Hydroxide', true))()
+end)
+
+Section:NewButton("In-Line Translator", "Translate", function()
+    loadstring(game:HttpGetAsync('https://i.qts.life/r/ChatInlineTranslator.lua', true))()
+end)
+
+local Tab = Window:NewTab("Credits")
+local Section = Tab:NewSection("Created by ɹɐʇsɓuᴉuɹoW ɐuᴉɹqɐS")
+
+local Section = Tab:NewSection("Toggle UI")
+Section:NewKeybind("Toggle UI", "Toggle UI", Enum.KeyCode.Equal, function()
+	Library:ToggleUI()
+end)
+
+wait(1)
+game.StarterGui:SetCore("SendNotification", { 
+    Title = "★ᵀʰᵉ ᴹᵒʳⁿⁱⁿᵍˢᵗᵃʳ ᶜⁱʳᶜˡᵉ★";
+    Text = "Miraculous RP GUI    ~~~~~~ Now Active ~~~~~~";               
+    Icon = "rbxthumb://type=Asset&id=10845688213&w=150&h=150";
+    Duration = "60";
+    Button1 = "Close";
+})
