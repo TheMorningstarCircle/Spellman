@@ -399,8 +399,16 @@ Section:NewButton("Infinite Yield", "Admin", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
+Section:NewButton("Btools", "", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TheMorningstarCircle/Spellman/main/Btools"))()
+end)
+
+Section:NewButton("CMD Admin", "", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TheMorningstarCircle/Spellman/main/CMD"))()
+end)
+
 Section:NewButton("Dark Dex", "Dex", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/0BL1V10NN/Morningstar-Scripts/main/Dex"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TheMorningstarCircle/Spellman/main/Dex"))()
 end)
 
 Section:NewButton("Simple Spy", "Remote Spy", function()
@@ -408,7 +416,7 @@ Section:NewButton("Simple Spy", "Remote Spy", function()
 end)
 
 Section:NewButton("Hydroxide", "Remote Spy", function()
-    loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/0BL1V10NN/Morningstar-Scripts/main/Hydroxide', true))()
+    loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/TheMorningstarCircle/Spellman/main/Hydroxide', true))()
 end)
 
 Section:NewButton("In-Line Translator", "Translate", function()
@@ -419,13 +427,14 @@ local Tab = Window:NewTab("Credits")
 local Section = Tab:NewSection("Created by ɹɐʇsɓuᴉuɹoW ɐuᴉɹqɐS")
 
 local Section = Tab:NewSection("Toggle UI")
-Section:NewKeybind("Toggle UI", "Toggle UI", Enum.KeyCode.Zero, function()
+Section:NewKeybind("Toggle UI", "Toggle UI", Enum.KeyCode.Equal, function()
 	Library:ToggleUI()
 end)
+
 wait(1)
 game.StarterGui:SetCore("SendNotification", { 
     Title = "★ᵀʰᵉ ᴹᵒʳⁿⁱⁿᵍˢᵗᵃʳ ᶜⁱʳᶜˡᵉ★";
-    Text = "Multiverse Reborn GUI             ~~~~~~ Now Active ~~~~~~";               
+    Text = "Multiverse Reborn GUI    ~~~~~~ Now Active ~~~~~~";               
     Icon = "rbxthumb://type=Asset&id=10845688213&w=150&h=150";
     Duration = "60";
     Button1 = "Close";
