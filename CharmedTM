@@ -2237,7 +2237,7 @@ local Tab = Window:NewTab("Credits")
 local Section = Tab:NewSection("Created by ɹɐʇsɓuᴉuɹoW ɐuᴉɹqɐS")
 
 local Section = Tab:NewSection("Toggle UI")
-Section:NewKeybind("Toggle UI", "Toggle UI", Enum.KeyCode.Equal, function()
+Section:NewKeybind("Toggle UI", "Toggle UI", Enum.KeyCode.Zero, function()
 	Library:ToggleUI()
 end)
 
