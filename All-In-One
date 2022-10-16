@@ -8,6 +8,10 @@ Section:NewButton("Tre_Mainee Charmed Script", "", function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/SabrinaMorningstar27/TheMorningstarCircle/main/CharmedTM'),true))()
 end)
 
+Section:NewButton("Mystqer Charmed Script", "", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/TheMorningstarCircle/Spellman/main/CharmedMystqer'),true))()
+end)
+
 Section:NewButton("Vellexia Charmed Script", "", function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/SabrinaMorningstar27/TheMorningstarCircle/main/CharmedVex'),true))()
 end)
