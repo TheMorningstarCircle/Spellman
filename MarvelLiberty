@@ -1,11 +1,11 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Marvel: Liberty GUI Made By ɹɐʇsɓuᴉuɹoW ɐuᴉɹqɐS", "DarkTheme")
+local Window = Library.CreateLib("Marvel: Liberty GUI Made By ɹɐʇsɓuᴉuɹoW ɐuᴉɹqɐS", "BloodTheme")
 
 -- Characters
 local Tab = Window:NewTab("Characters")
 local Section = Tab:NewSection("Main")
 
-Section:NewButton("Destroy", "", function()
+Section:NewButton("Destroy Selection UI", "", function()
     game.ReplicatedStorage.Ui.MainScreen:destroy()
        game.WakSpace.Selection_Background:destroy()
 
