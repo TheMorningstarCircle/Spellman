@@ -2376,8 +2376,8 @@ Section:NewButton("Underworld Entrance", "Teleport in the Entrance of Underworld
 end)
 
 Section:NewButton("Underworld Exit", "Teleport in the Exit of Underworld", function()
-    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-322, 7381, 779)
- end)
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-322, 7381, 779))
+end)
 
 Section:NewButton("Top of The Underworld", "Teleport in the Top of the Underworld", function()
     game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-128, 7462, 606))
