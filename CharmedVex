@@ -191,7 +191,7 @@ Section:NewButton("Change Energy Value to 999999999999999", "", function()
 end)
 
 Section:NewButton("Change Energy Max Value to 999999999999999", "", function()
-    game.Players.LocalPlayer.Character.EnergyMax = 999999999999999
+    game.Players.LocalPlayer.Character.Humanoid.EnergyMax.Value = 999999999999999
 end)
 
 local Section = Tab:NewSection("Remove Misc")
