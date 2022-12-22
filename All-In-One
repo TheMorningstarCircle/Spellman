@@ -20,6 +20,10 @@ Section:NewButton("Crossover Legends Script", "", function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/SabrinaMorningstar27/TheMorningstarCircle/main/CrossoverLegends'),true))()
 end)
 
+Section:NewButton("Dawn Of Sorcery Script", "", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/TheMorningstarCircle/Spellman/main/DawnofSorcery'),true))()
+end)
+
 Section:NewButton("Era Of Encanto Script", "", function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/SabrinaMorningstar27/TheMorningstarCircle/main/EraofEncanto'),true))()
 end)
@@ -72,6 +76,9 @@ Section:NewButton("Starlix Club Script", "", function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/SabrinaMorningstar27/TheMorningstarCircle/main/Starlix%20Club'),true))()
 end)
 
+Section:NewButton("The Gifted Mutants Script", "", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/TheMorningstarCircle/Spellman/main/TheGiftedMutants'),true))()
+end)
 
 Section:NewButton("The Fairy Guardians Script", "", function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/SabrinaMorningstar27/TheMorningstarCircle/main/TheFairyGuardians'),true))()
