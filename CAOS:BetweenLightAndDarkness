@@ -673,7 +673,7 @@ local args = {
     }
 }
 
-game:GetService("ReplicatedStorage").Remotes.InitSpell.InitTelekeneticPush:FireServer(unpack(args))
+game:GetService("ReplicatedStorage").Remotes.InitSpell.InitTelekineticPush:FireServer(unpack(args))
 
 end
 end
@@ -1058,6 +1058,49 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes.InitSpell.InitCherylIgnis:FireServer(unpack(args))
+end)
+
+local Tab = Window:NewTab("Teleport")
+local Section = Tab:NewSection("Locations")
+
+Section:NewButton("Church of Night", "", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-539, 7, 306))
+end)
+
+Section:NewButton("Spellman Mortuary", "", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-220, 15, -457))
+end)
+
+Section:NewButton("The Mines", "", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(800, 7, 598))
+end)
+
+Section:NewButton("Hell Gate", "", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(667, 6, 895))
+end)
+
+Section:NewButton("Hell", "", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(813, -72, 928))
+end)
+
+Section:NewButton("Carnival", "", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(652, 5, -419))
+end)
+
+Section:NewButton("Cehenna Station", "", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-752, 5, -171))
+end)
+
+Section:NewButton("Academy", "", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-811, -65, -178))
+end)
+
+Section:NewButton("Greendale", "", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(259, 38, 167))
+end)
+
+Section:NewButton("Voodoo Shop", "", function()
+    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(140, 5, 135))
 end)
 
 local Tab = Window:NewTab("Others")
