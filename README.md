@@ -2,3 +2,4 @@
 - 💞️ I love doing scripts
 - 🌱 I’m still learning about lua
 - 📫 If your finding my discord then find it :p
+- 🤬 Who cares if my scripts sucks, but why are you here tho. Bitch!
